@@ -4,8 +4,126 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&family=Inter:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Prueba técnica Techpump</title>
+    <title>Prueba Técnica Techpump</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="./images/mobile_logo.svg" alt="Siroko" title="Siroko" />
+      <img src="./images/desktop_logo.svg" alt="Siroko" title="Siroko" />
+    </header>
+    <main>
+      <section>
+        <span>Paso 1 de 2</span>
+        <h1>¡Vamos Allá!</h1>
+        <p>
+          Has llegado hasta el test de Siroko. Responde las siguientes preguntas
+          y genera tu código premiado a medida.
+        </p>
+        <form action="">
+          <h4>Uso Siroko desde...</h4>
+          <fieldset>
+            <input type="radio" id="2016" name="year" value="7" checked />
+            <label for="2016">2016</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="2017" name="year" value="8" />
+            <label for="2017">2017</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="2018" name="year" value="9" />
+            <label for="2018">2018</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="2019" name="year" value="10" />
+            <label for="2019">2019</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="2020" name="year" value="2" />
+            <label for="2020">2020</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="2021" name="year" value="3" />
+            <label for="2021">2021</label>
+          </fieldset>
+          <button>
+            <p>Siguiente</p>
+            <img src="./images/arrow.svg" alt="Siguiente" />
+          </button>
+        </form>
+      </section>
+      <section>
+        <span>Paso 2 de 2</span>
+        <h1>Vamos, una más</h1>
+        <form action="">
+          <h4>Por unas gafas Siroko,yo...</h4>
+          <fieldset>
+            <input
+              type="radio"
+              id="navaja"
+              name="option2"
+              value="VAJA"
+              checked
+            />
+            <label for="navaja">Segaría a navaja</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="cachopo" name="option2" value="HOPO" />
+            <label for="cachopo">Rechazaría un cachopo</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="tierras" name="option2" value="RRAS" />
+            <label for="tierras">Renunciaría a mis tierras</label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="ternera" name="option2" value="NERA" />
+            <label for="ternera">Regalaría una ternera</label>
+          </fieldset>
+          <button>
+            <p>Siguiente</p>
+            <img src="./images/arrow.svg" alt="Siguiente" />
+          </button>
+        </form>
+      </section>
+      <section>
+        <span>Tu premio está listo</span>
+        <h1>¡Enhorabuena!</h1>
+        <form action="https://www.siroko.com/">
+          <h4>Lo prometido es deuda</h4>
+          <div>
+            <p>Code</p>
+            <button>Copiar</button>
+          </div>
+          <div>
+            <p>
+              Introduce este código en tu próxima compra para conseguir tu
+              premio. ¡Disponible durante 20 minutos!
+            </p>
+          </div>
+          <div>
+            <img src="./images/clock.svg" alt="Tiempo restante" />
+            <div></div>
+          </div>
+          <button>
+            <p>Ir a siroko.com</p>
+            <img src="./images/arrow.svg" alt="Ir a Siroko" />
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>2016-2021 Siroko Solutions S.L.</p>
+      <p>
+        Todos los derechos reservados.
+        <a href="#">Ver bases</a>
+      </p>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
 </html>
