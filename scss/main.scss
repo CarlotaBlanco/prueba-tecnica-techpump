@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'LiberatorSIROKO-Heavy';
+  src: url('../fonts/LiberatorSIROKO-Heavy.woff2') format('woff2'),
+    url('../fonts/LiberatorSIROKO-Heavy.woff') format('woff');
+}
+
+//Variables
+
+$colorWhite: #fff;
+$colorWhiteAlpha: rgba(255, 255, 255, 0.09);
+$colorGrey: #bbbbbb;
+$colorLightGreen: #5dc2bd;
+$colorMediumGreen: #339b95;
+$colorDarkGreen: #2c5e5b;
+$colorPurple: #311429;
+$colorPurpleTimer: #2c0c23;
+$colorPink: #c92f58;
+$colorWhiteAlpha: rgba(255, 255, 255, 0.09);
+$colorBeige: #efe5c3;
+$colorBlack: #000;
+$colorRed: #c51414;
+$fontInter: 'Inter', sans-serif;
+$fontLiberatorHeavy: 'LiberatorSIROKO-Heavy';
+$fontInconsolata: 'Inconsolata', monospace;
+
+//Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  font-family: $fontInconsolata;
+  font-weight: 300;
+}
+
+.header {
+  padding: 25px;
+  &__logo_desktop {
+    display: none;
+    @media all and (min-width: 834px) {
+      display: inline-block;
+    }
+  }
+  &__logo_mobile {
+    @media all and (min-width: 834px) {
+      display: none;
+    }
+  }
+  @media all and (min-width: 834px) {
+    padding: 35px 35px 25px 35px;
+  }
+  @media all and (min-width: 1440px) {
+    padding: 50px 250px 25px 250px;
+  }
+}
+
+.main {
+  padding: 0 25px;
+  color: $colorWhite;
+  min-height: 80vh;
+  &__title {
+    font-family: $fontLiberatorHeavy;
+    font-size: 35px;
+    line-height: 35px;
+    margin: 15px 0;
+  }
+
+  &__pill {
+    padding: 3px 7px;
+    background-color: $colorLightGreen;
+    color: $colorDarkGreen;
+    font-family: $fontInter;
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  .form {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: $colorPurple;
+    border-radius: 3px;
+    &__title {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: $fontInter;
+      color: $colorBeige;
+    }
+
+    &__fieldset {
+      background-color: $colorWhiteAlpha;
+      border-radius: 4px;
+      border: 0;
+      padding: 13px 12px;
+      margin: 10px 0;
+      position: relative;
+      &--radio {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        padding: 100%;
+      }
+
+      &--radio + label {
+        background: url('../images/radio.svg') no-repeat 0 0;
+        background-size: contain;
+        cursor: pointer;
+        padding-left: 25px;
+        display: block;
+      }
+
+      &--radio:checked + label {
+        background: url('../images/radio_checked.svg') no-repeat 0 0;
+        background-size: contain;
+        display: block;
+      }
+    }
+
+    &__fieldset:hover {
+      background-color: $colorPink;
+    }
+    .form__button {
+      width: 100%;
+      background-color: $colorMediumGreen;
+      border: 0;
+      border-radius: 4px;
+      text-align: center;
+      color: $colorWhite;
+      font-family: $fontInter;
+      font-size: 15px;
+      padding: 13px;
+      &--text {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+    &__code {
+      width: 100%;
+      background: linear-gradient(270deg, #ffffff 0%, #bdbdbd 100%);
+      border-radius: 2px;
+      color: $colorBlack;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 10px 0;
+      &--number {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 117%;
+      }
+
+      &--button {
+        font-family: $fontInconsolata;
+        font-weight: 700;
+        font-size: 14px;
+        border: 2px solid $colorBlack;
+        padding: 5px;
+      }
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 117%;
+    }
+    &__timer {
+      background: $colorPurpleTimer;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 15px;
+      margin: 10px 0;
+      gap: 10px;
+      &--countdown {
+        font-weight: 700;
+        font-size: 27px;
+      }
+
+      &--text {
+        font-weight: 700;
+      }
+
+      &--link {
+        color: $colorWhite;
+      }
+    }
+  }
+  @media all and (min-width: 1440px) {
+    padding: 0 250px;
+  }
+}
+
+.footer {
+  padding: 25px;
+  background-color: black;
+  color: $colorGrey;
+  font-size: 14px;
+  line-height: 30px;
+  height: 98px;
+  &__link {
+    color: $colorWhite;
+    font-weight: 700;
+  }
+  @media all and (min-width: 834px) {
+    padding: 35px 35px 25px 35px;
+    height: 118px;
+  }
+  @media all and (min-width: 1440px) {
+    height: 148px;
+    padding: 50px 250px 25px 250px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.red {
+  background-color: var(--colorRed);
+}

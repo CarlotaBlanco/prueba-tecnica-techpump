@@ -1,1 +1,212 @@
+@font-face {
+  font-family: "LiberatorSIROKO-Heavy";
+  src: url("../fonts/LiberatorSIROKO-Heavy.woff2") format("woff2"), url("../fonts/LiberatorSIROKO-Heavy.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+}
+
+.header {
+  padding: 25px;
+}
+.header__logo_desktop {
+  display: none;
+}
+@media all and (min-width: 834px) {
+  .header__logo_desktop {
+    display: inline-block;
+  }
+}
+@media all and (min-width: 834px) {
+  .header__logo_mobile {
+    display: none;
+  }
+}
+@media all and (min-width: 834px) {
+  .header {
+    padding: 35px 35px 25px 35px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .header {
+    padding: 50px 250px 25px 250px;
+  }
+}
+
+.main {
+  padding: 0 25px;
+  color: #fff;
+  min-height: 80vh;
+}
+.main__title {
+  font-family: "LiberatorSIROKO-Heavy";
+  font-size: 35px;
+  line-height: 35px;
+  margin: 15px 0;
+}
+.main__pill {
+  padding: 3px 7px;
+  background-color: #5dc2bd;
+  color: #2c5e5b;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.main .form {
+  margin: 25px 0;
+  padding: 20px;
+  background-color: #311429;
+  border-radius: 3px;
+}
+.main .form__title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  color: #efe5c3;
+}
+.main .form__fieldset {
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 4px;
+  border: 0;
+  padding: 13px 12px;
+  margin: 10px 0;
+  position: relative;
+}
+.main .form__fieldset--radio {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  padding: 100%;
+}
+.main .form__fieldset--radio + label {
+  background: url("../images/radio.svg") no-repeat 0 0;
+  background-size: contain;
+  cursor: pointer;
+  padding-left: 25px;
+  display: block;
+}
+.main .form__fieldset--radio:checked + label {
+  background: url("../images/radio_checked.svg") no-repeat 0 0;
+  background-size: contain;
+  display: block;
+}
+.main .form__fieldset:hover {
+  background-color: #c92f58;
+}
+.main .form .form__button {
+  width: 100%;
+  background-color: #339b95;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  padding: 13px;
+}
+.main .form .form__button--text {
+  display: inline;
+  margin-right: 10px;
+}
+.main .form__code {
+  width: 100%;
+  background: linear-gradient(270deg, #ffffff 0%, #bdbdbd 100%);
+  border-radius: 2px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+}
+.main .form__code--number {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 117%;
+}
+.main .form__code--button {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid #000;
+  padding: 5px;
+}
+.main .form__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 117%;
+}
+.main .form__timer {
+  background: #2c0c23;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  gap: 10px;
+}
+.main .form__timer--countdown {
+  font-weight: 700;
+  font-size: 27px;
+}
+.main .form__timer--text {
+  font-weight: 700;
+}
+.main .form__timer--link {
+  color: #fff;
+}
+@media all and (min-width: 1440px) {
+  .main {
+    padding: 0 250px;
+  }
+}
+
+.footer {
+  padding: 25px;
+  background-color: black;
+  color: #bbbbbb;
+  font-size: 14px;
+  line-height: 30px;
+  height: 98px;
+}
+.footer__link {
+  color: #fff;
+  font-weight: 700;
+}
+@media all and (min-width: 834px) {
+  .footer {
+    padding: 35px 35px 25px 35px;
+    height: 118px;
+  }
+}
+@media all and (min-width: 1440px) {
+  .footer {
+    height: 148px;
+    padding: 50px 250px 25px 250px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.red {
+  background-color: var(--colorRed);
+}
+
 /*# sourceMappingURL=main.css.map */
