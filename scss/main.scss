@@ -170,7 +170,6 @@ $fontInconsolata: 'Inconsolata', monospace;
       line-height: 117%;
     }
     &__timer {
-      background: $colorPurpleTimer;
       border-radius: 3px;
       display: flex;
       flex-direction: row;
@@ -223,6 +222,10 @@ $fontInconsolata: 'Inconsolata', monospace;
   display: none;
 }
 
-.red {
-  background-color: var(--colorRed);
+.expired {
+  background-color: $colorRed;
+}
+
+.on_time {
+  background: $colorPurpleTimer;
 }

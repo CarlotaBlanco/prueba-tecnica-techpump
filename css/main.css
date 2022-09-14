@@ -45,7 +45,7 @@
 .main {
   padding: 0 25px;
   color: #fff;
-  min-height: 80vh;
+  min-height: 82vh;
 }
 .main__title {
   font-family: "LiberatorSIROKO-Heavy";
@@ -150,7 +150,6 @@
   line-height: 117%;
 }
 .main .form__timer {
-  background: #2c0c23;
   border-radius: 3px;
   display: flex;
   flex-direction: row;
@@ -205,8 +204,12 @@
   display: none;
 }
 
-.red {
-  background-color: var(--colorRed);
+.expired {
+  background-color: #c51414;
+}
+
+.on_time {
+  background: #2c0c23;
 }
 
 /*# sourceMappingURL=main.css.map */

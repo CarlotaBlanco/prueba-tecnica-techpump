@@ -84,7 +84,8 @@ function showRemaining() {
     document.querySelector(
       '.js_countdown'
     ).innerHTML = `<p class="form__timer--text">Código caducado. <a class="form__timer--link" href="javascript:location.reload()">Reiniciar</a></p>`;
-    document.querySelector('.js_form_timer').classList.add('red');
+    document.querySelector('.js_form_timer').classList.remove('on_time');
+    document.querySelector('.js_form_timer').classList.add('expired');
     return;
   }
 
