@@ -24,6 +24,8 @@ function stepOne(event) {
 
 function stepTwo(event) {
   event.preventDefault();
+  end = Date.now() + minutos + segundos;
+  timer = setInterval(showRemaining);
   stepTwoSection.classList.add('hidden');
   congratulationsSection.classList.remove('hidden');
 }
@@ -53,10 +55,10 @@ function copyToClickBoard(event) {
   navigator.clipboard
     .writeText(content)
     .then(() => {
-      console.log('Text copied to clipboard...');
+      alert('Text copied to clipboard...');
     })
     .catch((err) => {
-      console.log('Something went wrong', err);
+      alert('Something went wrong', err);
     });
 }
 
@@ -68,7 +70,7 @@ let segundos = 0;
 segundos = segundos * 1000;
 minutos = minutos * 60000;
 
-let end = Date.now() + minutos + segundos;
+let end;
 
 let _second = 1000;
 let _minute = _second * 60;
@@ -92,12 +94,18 @@ function showRemaining() {
   let minutes = Math.floor((distance % _hour) / _minute);
   let seconds = Math.floor((distance % _minute) / _second);
 
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
   document.querySelector(
     '.js_countdown'
   ).innerHTML = `<p class="form__timer--countdown">${minutes}:${seconds}</p>`;
 }
-
-timer = setInterval(showRemaining, 1000);
 
 //Listeners
 
